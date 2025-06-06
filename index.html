@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>My Portfolio</title>
+ 
+</head>
+<body>
+  <header>
+    <h1>Mubbyspark</h1>
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav id="nav-menu">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="about">
+    <div class="hero-text">
+      <h2>Hi, I'm <span class="highlight">Mubbyspark</span></h2>
+      <p>Welcome to my portfolio! I'm a <span class="highlight">creative web developer</span> passionate about building <span class="highlight">responsive, modern websites</span>. Explore my work and feel free to reach out!</p>
+    </div>
+    <div class="hero-image">
+      <img src="img/Copilot.png" alt="Your Image" style="width: 500%; height: auto; border-radius: 100%; object-fit: cover; object-position: center 5%; " />
+    </div>
+  </section>
+
+</body>
+  <section id="projects">
+    <h2 style="text-align:center; margin-bottom: 1rem;">My Projects</h2>
+    <div class="projects-container">
+      <div class="project">
+        <img src="img/6387843.jpg" alt="Project One Image" />
+        <h3 class="highlight">Project One</h3>
+        <p>A short description of the project goes here. You can showcase the technologies used and what problem it solved.</p>
+      </div>
+      <div class="project">
+        <img src="img/4150802.jpg" alt="Project Two Image" />
+        <h3 class="highlight">Project Two</h3>
+        <p>This is another project you've worked on. Highlight the uniqueness or any challenges you faced and solved.</p>
+      </div>
+      <div class="project">
+        <img src="img/4905662.jpg" alt="Project Three Image" />
+        <h3 class="highlight">Project Three</h3>
+        <p>Describe how this project stands out, what tools were used, and the end result or impact.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 style="text-align:center; margin-bottom: 1rem;">Contact</h2>
+    <form action="#" method="post" style="max-width: 500px; margin: 0 auto;">
+      <div style="margin-bottom: 1rem;">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required style="width: 100%; padding: 0.5rem;" />
+      </div>
+      <div style="margin-bottom: 1rem;">
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required style="width: 100%; padding: 0.5rem;" />
+      </div>
+      <div style="margin-bottom: 1rem;">
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 0.5rem; resize: none;"></textarea>
+      </div>
+      <button type="submit" style="padding: 0.5rem 1rem; background-color: #1a1a1a; color: #fff; border: none; cursor: pointer;">
+        Send Message
+      </button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; <span class="highlight" id="year"></span> <span class="highlight">Your Name</span>. All Rights Reserved.</p>
+    <p>Designed with passion by <span class="highlight">mubbyspark</span></p>
+    <div class="footer-links">
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
+
+    hamburger.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
